@@ -24,13 +24,14 @@ h1 {
 h2 {
   font-size: 1.3em; 
   font-weight: 900; 
-  margin-bottom: 1em;
+  margin-bottom: 1.4em;
+  padding: 2em;
+  text-align: center;
 }
 
 h3 {
   font-size: 0.9em; 
   font-weight: 900; 
-  font-style: italic;
   margin-bottom: 1em;
 }
 
