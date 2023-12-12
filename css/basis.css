@@ -110,7 +110,7 @@ padding: 1em;
   text-align: center;
   white-space: nowrap;
   color: #13389B;
-  font-weight: bold;
+  font-weight: medium;
   font-size: 1.1em;
   text-decoration: none;
 }
@@ -137,7 +137,8 @@ section.video {
   padding: 0;
 } 
 
-.video {
+
+video {
   width: 100%;
   height: 100%;
   right: 0;
@@ -146,7 +147,7 @@ section.video {
   min-height: 100%;
 }
 
-.produktintro{
+.produktblaa{
   background-color: #13389B;
   color: #fff;
 }
@@ -162,11 +163,23 @@ section.video {
   flex-direction: column;
 }
 
+.introarbejde {
+  padding: 2rem 7%;
+}
+
+.tekst-med-baggrund {
+  background-image: url(img/baggrundtekst.svg);
+  background-size: cover; 
+  color: white; 
+  padding: 20px; 
+}
+
+
 .video-iframe {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%; 
-  height: 0;
+
 }
 
 .video-iframe iframe {
@@ -177,8 +190,18 @@ section.video {
   top: 0;
 }
 
+.hyperlink {
+  text-decoration: underline; 
+  color: #0000EE; 
+}
 
-@media screen and (min-width: 640px) {
+.hyperlink:hover {
+  text-decoration: none; 
+  color: #fff; 
+}
+
+
+@media screen and (min-width: 601px) and (max-width:900px) {
   header {
     flex-direction: row; 
     justify-content: space-between; 
@@ -204,11 +227,38 @@ section.video {
   }
   .knap-position {
     display: flex;
-    justify-content: flex-end; /* Aligner elementer til højre */
+    justify-content: flex-end;
 }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 901px) and (max-width:1200px) {
+  header {
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+
+  .navigation ul {
+    flex-direction: row;
+    padding: 1.5em;
+  }
+  
+  .navigation li {
+    margin-left: 1em 
+  }
+  .split { 
+    flex-direction: row;
+  }
+ .split > * {
+  flex-basis: 100%;
+  }
+ .split > * + * {
+  margin-left: 3em;
+  }
+}
+
+
+@media screen and (min-width: 1201px) {
   header {
     flex-direction: row; 
     justify-content: space-between; 
@@ -224,5 +274,23 @@ section.video {
   .navigation li {
     margin-left: 3em 
   }
-}
 
+  .introarbejde {
+    max-width: 90%; 
+    margin-right: auto; 
+    margin-left: auto; 
+  }
+  .split { 
+    flex-direction: row;
+  }
+ .split > * {
+  flex-basis: 100%;
+  }
+ .split > * + * {
+  margin-left: 3em;
+  }
+  .knap-position {
+    display: flex;
+    justify-content: flex-end;
+}
+}
