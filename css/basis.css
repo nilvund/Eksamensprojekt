@@ -17,8 +17,8 @@ h1 {
   font-size: 1.8em; 
   font-weight: 900; 
   line-height: 3;
-  margin-bottom: 1em;
   text-align: center;
+  padding: 5%;
 }
 
 h2 {
@@ -42,6 +42,7 @@ p {
 
 .text-align {
   text-align: center;
+  padding: 0% 15%;
 }
 
 .container {
@@ -51,7 +52,7 @@ p {
 
 header,
 footer {
-  padding: 0.7em;
+  padding: 1em;
   background-color: #FFB96E;
   display: flex;
   flex-direction: column; 
@@ -149,7 +150,7 @@ video {
   width: 100%;
   height: 100%;
   right: 0;
-  bottom: 3em;
+  bottom: 1.1em;
   min-width: 100%; 
   min-height: 100%;
 }
@@ -183,6 +184,7 @@ video {
   height: 100%;
   left: 0;
   top: 0;
+  padding: 2% 0;
 }
 
 .hyperlink-blaa {
@@ -206,6 +208,31 @@ video {
   color: #FFB96E; 
   transition: 0.2s;
 }
+
+.kontakt-container {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+}
+
+.kontakt-kasse {
+  background-color: #13389B; 
+  border-radius: 10px; 
+  padding: 20px; 
+  margin: 10px auto; 
+  width: 80%; 
+  max-width: 300px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; 
+}
+
+.kontakt-kasse p {
+  color: white;
+  margin: 0; 
+}
+
 
 @media screen and (min-width: 601px) and (max-width:900px) {
   header {
