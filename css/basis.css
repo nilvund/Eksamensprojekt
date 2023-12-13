@@ -18,7 +18,7 @@ h1 {
   font-weight: 900; 
   line-height: 3;
   text-align: center;
-  padding: 5%;
+  padding: 2%;
 }
 
 h2 {
@@ -52,7 +52,7 @@ p {
 
 header,
 footer {
-  padding: 1em;
+  padding: 1.1em;
   background-color: #FFB96E;
   display: flex;
   flex-direction: column; 
@@ -162,6 +162,13 @@ video {
   margin-bottom: 2rem;
 }
 
+.billede-hop {
+  display: center;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
 .split {
   display: flex;
   flex-direction: column;
@@ -198,12 +205,14 @@ video {
 }
 
 .hyperlink-blaa:hover {
+  display: inline-block;
   text-decoration: none; 
   color: #FFB96E;
   transition: 0.2s;
 
 }
 .hyperlink-hvid:hover  {
+  display: inline-block;
   text-decoration: none; 
   color: #FFB96E; 
   transition: 0.2s;
@@ -214,18 +223,18 @@ video {
   flex-direction: column; 
   justify-content: center; 
   align-items: center; 
-  height: 100vh; 
 }
 
 .kontakt-kasse {
   background-color: #13389B; 
   border-radius: 10px; 
-  padding: 20px; 
-  margin: 10px auto; 
+  padding: 1.25em;
+  margin: 0.625em auto; 
   width: 80%; 
   max-width: 300px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center; 
+  text-align: center;
+  overflow: hidden;
 }
 
 .kontakt-kasse p {
@@ -233,6 +242,14 @@ video {
   margin: 0; 
 }
 
+.text-align {
+  font-size: 1em; /* Tilbage til normal skriftstørrelse på større skærme */
+  padding: 0 15%; /* Tilbage til normal padding */
+}
+
+footer .footer-container p {
+  white-space: normal; /* Tillad linjeskift ved normal flow */
+}
 
 @media screen and (min-width: 601px) and (max-width:900px) {
   header {
@@ -249,20 +266,13 @@ video {
   .navigation li {
     margin-left: 1em 
   }
-  .split { 
-    flex-direction: row;
+
+  footer .footer-container p {
+    white-space: normal; 
   }
- .split > * {
-  flex-basis: 100%;
-  }
- .split > * + * {
-  margin-left: 3em;
-  }
-  .knap-position {
-    display: flex;
-    justify-content: flex-end;
+
 }
-}
+
 
 @media screen and (min-width: 901px) and (max-width:1200px) {
   header {
@@ -287,6 +297,9 @@ video {
   }
  .split > * + * {
   margin-left: 3em;
+  }
+  footer .footer-container p {
+    white-space: normal; 
   }
 }
 
@@ -313,17 +326,29 @@ video {
     margin-right: auto; 
     margin-left: auto; 
   }
+ 
   .split { 
     flex-direction: row;
   }
- .split > * {
+ 
+  .split > * {
   flex-basis: 100%;
   }
- .split > * + * {
+ 
+  .split > * + * {
   margin-left: 3em;
   }
+  
   .knap-position {
     display: flex;
     justify-content: flex-end;
-}
+  }
+  
+  .container{
+    max-width: 1140px;
+  }
+  
+  footer .footer-container p {
+    white-space: normal; 
+  }
 }
