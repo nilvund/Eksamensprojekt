@@ -162,6 +162,28 @@ video {
   margin-bottom: 2rem;
 }
 
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.portfolio-item {
+  background-color: #13389B;
+  margin: 10px 0; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  height: auto;
+  padding: 20px; 
+}
+
+
 .billede-hop {
   display: center;
   max-width: 100%;
@@ -285,23 +307,38 @@ footer .footer-container p {
     flex-direction: row;
     padding: 1.5em;
   }
-  
+    
   .navigation li {
     margin-left: 1em 
   }
+
   .split { 
     flex-direction: row;
   }
- .split > * {
-  flex-basis: 100%;
+
+    .split > * {
+    flex-basis: 100%;
   }
- .split > * + * {
-  margin-left: 3em;
+
+  .split > * + * {
+    margin-left: 3em;
   }
-  footer .footer-container p {
-    white-space: normal; 
+
+    footer .footer-container p {
+      white-space: normal; 
+  }
+
+  .portfolio-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+  }
+    
+  .portfolio-item {
+        width: calc(33.333% - 20px); /* Tre elementer pr række minus margin */
+        margin: 10px;
   }
 }
+
 
 
 @media screen and (min-width: 1201px) {
@@ -326,29 +363,34 @@ footer .footer-container p {
     margin-right: auto; 
     margin-left: auto; 
   }
- 
   .split { 
     flex-direction: row;
   }
- 
-  .split > * {
+ .split > * {
   flex-basis: 100%;
   }
- 
-  .split > * + * {
+ .split > * + * {
   margin-left: 3em;
   }
-  
   .knap-position {
     display: flex;
     justify-content: flex-end;
-  }
-  
-  .container{
-    max-width: 1140px;
-  }
-  
-  footer .footer-container p {
-    white-space: normal; 
-  }
 }
+.container{
+  max-width: 1140px;
+}
+  footer .footer-container p {
+  white-space: normal; 
+  }
+
+  .portfolio-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: calc(33.333% - 20px); 
+    margin: 10px;
+}
+}
+
