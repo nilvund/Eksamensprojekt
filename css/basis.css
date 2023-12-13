@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-  font-size: 1.8em; 
+  font-size: 2em; 
   font-weight: 900; 
   line-height: 3;
   text-align: center;
@@ -22,10 +22,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4em; 
-  font-weight: 900; 
-  margin-bottom: 1.4em;
+  font-size: 1.8em; 
+  font-weight: 700; 
+  line-height: 3;
   text-align: center;
+  padding: 2%;
 }
 
 h3 {
@@ -87,8 +88,25 @@ img {
   transition: background-color 0.3s;
  }
 
+ .min-knap-hvid {
+  background-color: #fff;
+  color: #13389B;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em; 
+  transition: background-color 0.3s;
+ }
+
 .min-knap:hover {
-  background-color: #13389B;
+  background-color: #FFB96E;
+  transition: 1s;
+}
+
+.min-knap-hvid:hover {
+  background-color: #FFB96E;
+  transition: 1s;
 }
 
 .knap-position {
@@ -98,8 +116,13 @@ align-items: flex-end;
 padding: 1em;
 }
 
-a {
+.min-knap a{
   color:#fff;
+  text-decoration: none;
+}
+
+.min-knap-hvid a{
+  color: #13389B;
   text-decoration: none;
 }
 
@@ -128,6 +151,21 @@ a {
   text-decoration: none;
 }
 
+.punkter {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.punkter li {
+  display: block; 
+  margin-right: 20px; 
+}
+
+.punkter li::before {
+  content: '→ '; 
+  padding-right: 5px; 
+}
+
 .logo:hover {
   transform: scale(1.3);
   transition: 0.3s;
@@ -139,7 +177,7 @@ a {
 }
 
 section {
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   }
 
 .split > * {
@@ -164,29 +202,8 @@ video {
   max-width: 100%;
   height: auto;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
-
-.portfolio-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.portfolio-item {
-  background-color: #13389B;
-  margin: 10px 0; 
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.portfolio-item img {
-  max-width: 100%;
-  height: auto;
-  padding: 20px; 
-}
-
 
 .billede-hop {
   display: center;
