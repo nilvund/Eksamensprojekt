@@ -79,7 +79,6 @@ img {
 
 .min-knap {
   background-color: #13389B;
-  color: white; 
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -89,7 +88,7 @@ img {
  }
 
 .min-knap:hover {
-  background-color: #0A2763;
+  background-color: #13389B;
 }
 
 .knap-position {
@@ -97,6 +96,11 @@ display: flex;
 justify-content: center; 
 align-items: flex-end; 
 padding: 1em;
+}
+
+a {
+  color:#fff;
+  text-decoration: none;
 }
 
 .navigation ul {
@@ -323,6 +327,11 @@ footer .footer-container p {
   .split > * + * {
     margin-left: 3em;
   }
+
+  .knap-position {
+    display: flex;
+    justify-content: flex-end;
+}
 
     footer .footer-container p {
       white-space: normal; 
