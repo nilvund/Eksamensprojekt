@@ -57,7 +57,7 @@ span {
 
 .container {
   margin: 0 auto;
-  width: min(90%, 60rem);
+  width: min(90%);
 }
 
 header,
@@ -126,7 +126,7 @@ padding: 1em;
 }
 
 .min-knap a{
-  color:#fff;
+  color:#EFE7DD;
   text-decoration: none;
 }
 
@@ -301,23 +301,23 @@ video {
   font-size: 8em; 
 }
 
-.kontakt-container {
-  display: flex; 
-  flex-direction: row; 
-  justify-content: center; 
-  align-items: center; 
+.ikon-grid-kontakt {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); 
+ text-align: center;
 }
+
 
 .kontakt-kasse {
   background-color: #13389B; 
   border-radius: 10px; 
-  padding: 1.25em;
-  margin: 0.625em auto; 
-  width: 80%; 
+  padding: 1.25em; /* Juster denne værdi for at reducere padding */
+  margin: 0.625em auto; /* Juster denne værdi for at reducere det ydre rum */
+  width: calc(100% - 20px); /* Juster denne værdi til at fylde det tilgængelige rum */
   max-width: 300px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  overflow: hidden;
+  box-sizing: border-box; /* Sørg for at box-sizing er sat til border-box */
 }
 
 .kontakt-kasse p {
@@ -329,6 +329,7 @@ video {
   font-size: 1em; 
   padding: 0 15%; 
 }
+
 
 
 footer {
@@ -376,6 +377,7 @@ footer p {
     white-space: normal; 
   }
 
+
 }
 
 
@@ -406,13 +408,8 @@ footer p {
   .split > * + * {
     margin-left: 3em;
   }
-
-  .knap-position {
-    display: flex;
-    justify-content: flex-end;
-}
-
-    footer .footer-container p {
+    
+  footer .footer-container p {
       white-space: normal; 
   }
 
@@ -431,7 +428,6 @@ footer p {
   }
 
 }
-
 
 
 @media screen and (min-width: 1201px) {
@@ -465,31 +461,27 @@ footer p {
  .split > * + * {
   margin-left: 3em;
   }
-  .knap-position {
-    display: flex;
-    justify-content: flex-end;
-}
-.container{
-  max-width: 1140px;
-}
+  .container{
+    max-width: 1250px;
+  }
+
   footer .footer-container p {
   white-space: normal; 
   }
 
   .portfolio-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
 
-.portfolio-item {
-    width: calc(33.333% - 20px); 
-    margin: 10px;
-}
+  .portfolio-item {
+  width: calc(33.333% - 20px); 
+  margin: 10px;
+  }
 
-.ikon-grid {
+  .ikon-grid {
   grid-template-columns: repeat(3, 1fr); 
-}
-
+  }
 }
 
 
