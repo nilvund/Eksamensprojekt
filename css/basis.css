@@ -39,6 +39,15 @@ p {
   font-size: 1em; 
   line-height: 200%; 
   margin-bottom: 1.5em;
+  margin-top: 1em;
+}
+
+
+.ikontekst
+{
+  font-size: 1.5em; 
+  margin-bottom: 1.5em;
+  margin: 1em;
 }
 
 .text-align {
@@ -265,9 +274,37 @@ video {
   transition: 0.2s;
 }
 
+.ikon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Starter med 2 kolonner for mobile enheder */
+ text-align: center;
+}
+
+.ikon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+.ikon-tekst{
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+
+.fa-computer,
+.fa-video,
+.fa-camera-retro,
+.fa-envelope-open-text,
+.fa-palette,
+.fa-pen {
+  font-size: 8em; 
+}
+
+
 .kontakt-container {
   display: flex; 
-  flex-direction: column; 
+  flex-direction: row; 
   justify-content: center; 
   align-items: center; 
 }
@@ -317,10 +354,6 @@ footer {
 
 footer p {
   margin-top: 10px; 
-}
-
-.fa-computer {
-  font-size: 10em; /* Eller enhver anden størrelse */
 }
 
 
@@ -450,3 +483,15 @@ footer p {
 }
 }
 
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .ikon-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner for tablets */
+  }
+}
+
+@media (min-width: 901px) {
+  .ikon-grid {
+    grid-template-columns: repeat(6, 1fr); /* 6 kolonner for desktop */
+  }
+}
