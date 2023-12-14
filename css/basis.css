@@ -277,7 +277,7 @@ video {
 
 .ikon-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Starter med 2 kolonner for mobile enheder */
+  grid-template-columns: repeat(2, 1fr); 
  text-align: center;
 }
 
@@ -303,26 +303,21 @@ video {
 
 .ikon-grid-kontakt {
   display: grid;
-  grid-template-columns: repeat(1, 1fr); 
- text-align: center;
+  grid-template-columns: repeat(1, 300px); 
+  justify-content: center; 
+  margin: 0 auto; 
+  margin-bottom: 10px; 
 }
-
 
 .kontakt-kasse {
   background-color: #13389B; 
   border-radius: 10px; 
-  padding: 1.25em; /* Juster denne værdi for at reducere padding */
-  margin: 0.625em auto; /* Juster denne værdi for at reducere det ydre rum */
-  width: calc(100% - 20px); /* Juster denne værdi til at fylde det tilgængelige rum */
-  max-width: 300px; 
+  padding: 10px; 
+  width: 350px; 
+  height: 80px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  box-sizing: border-box; /* Sørg for at box-sizing er sat til border-box */
-}
-
-.kontakt-kasse p {
-  color: white;
-  margin: 0; 
+  margin: 10px auto; 
 }
 
 .text-align {
@@ -330,7 +325,17 @@ video {
   padding: 0 15%; 
 }
 
+.text-align {
+  font-size: 1em; 
+  padding: 0 15%;
+  margin-bottom: 50px; 
+}
 
+.kontakt-kasse p {
+  color: white;
+  margin: 0; 
+  font-size: 1.125em;
+}
 
 footer {
   display: flex;
@@ -377,6 +382,15 @@ footer p {
     white-space: normal; 
   }
 
+  .kontakt-kasse {
+    width: 350px;
+    height: 80px;
+  }
+
+  .ikon-grid-kontakt {
+    grid-template-columns: repeat(1, 300px); 
+    margin-bottom: 10px;
+  }
 
 }
 
@@ -425,6 +439,16 @@ footer p {
 
   .ikon-grid {
     grid-template-columns: repeat(3, 1fr); /* 3 kolonner for tablets */
+  }
+  .kontakt-kasse {
+    width: 350px;
+    height: 80px; /* fortsat fast bredde */
+    /* Undgå at ændre bredden */
+  }
+
+  .ikon-grid-kontakt {
+    grid-template-columns: repeat(1, 300px);
+    margin-bottom: 10px;
   }
 
 }
@@ -481,6 +505,15 @@ footer p {
 
   .ikon-grid {
   grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .kontakt-kasse {
+    width: 350px;
+    height: 80px; 
+  }
+  .ikon-grid-kontakt {
+    grid-template-columns: repeat(1, 300px);
+    margin-bottom: 10px;
   }
 }
 
