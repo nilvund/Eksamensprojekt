@@ -34,6 +34,7 @@ h3 {
   font-weight: 900; 
   margin-bottom: 1.1em;
   line-height: 1.5em;
+  text-align: center;
 }
 
 p {
@@ -64,12 +65,13 @@ span {
 header, footer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Spreder børneelementerne jævnt */
-  align-items: center; /* Centrerer elementerne vertikalt */
-  flex-wrap: wrap; /* Tillader elementerne at gå på næste linje, hvis ikke der er nok plads */
-  padding: 1.1em; /* Juster efter behov */
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  padding: 1.1em; 
   background-color: #FFB96E;
 }
+
 
 img {
   border-radius: 10px;
@@ -139,6 +141,8 @@ padding: 1em;
 
 .navigation ul {
   display: flex;
+  flex-direction: column;
+  padding: 1em;
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
@@ -220,7 +224,7 @@ section.video {
 
 .billede {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -229,10 +233,9 @@ section.video {
 }
 
 
-
 .billede-hop {
-  display: center;
-  max-width: 100%;
+  display: block;
+  width: 100%;
   height: auto;
   margin-bottom: 2rem;
 }
@@ -289,7 +292,7 @@ section.video {
 .ikon-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
- text-align: center;
+  text-align: center;
 }
 
 .ikon-item {
@@ -331,20 +334,15 @@ section.video {
   margin: 10px auto; 
 }
 
-.ikon-grid, .ikon-grid-kontakt {
+.ikon-grid, 
+.ikon-grid-kontakt {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Dette vil centrere dine items */
-  gap: 16px; /* Tilføjer mellemrum mellem items */
-  max-width: 100%; /* Sørger for at den maksimale bredde ikke overskrider skærmen */
-  margin: 0 auto; /* Centrerer grid i forhold til siden */
+  justify-content: center; 
+  margin: 1.5em; 
+  width: 100%; 
+  margin: 0 auto; 
 }
-
-.ikon-grid > *, .ikon-grid-kontakt > * {
-  flex: 1 1 300px; /* Hver item vil forsøge at være mindst 300px bred og vokse hvis der er plads */
-  max-width: 300px; /* Sørger for at items ikke bliver bredere end 300px */
-}
-
 
 .text-align {
   font-size: 1em; 
@@ -388,24 +386,7 @@ footer p {
 }
 
 
-@media screen and (max-width:600px) {
-  .navigation ul {
-    flex-direction: column;
-    padding: 1.5em;
-  }
-}
-
-
 @media screen and (min-width: 601px) and (max-width:900px) {
-
-  .navigation ul {
-    flex-direction: column;
-    padding: 1.5em;
-  }
-
-  footer .footer-container p {
-    white-space: normal; 
-  }
 
   .kontakt-kasse {
     width: 350px;
@@ -428,7 +409,7 @@ footer p {
   }
 
   .navigation ul {
-    flex-direction: column;
+    flex-direction: row;
     padding: 1.5em;
   }
     
@@ -448,10 +429,6 @@ footer p {
     margin-left: 3em;
   }
     
-  footer .footer-container p {
-      white-space: normal; 
-  }
-
   .portfolio-container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -497,27 +474,24 @@ footer p {
   }
 
   .container {
-    margin: 0 auto; /* Centrerer containeren horisontalt */
-    max-width: 1140px; /* En maksimumsbredde, der svarer til en typisk container størrelse for desktop */
-    width: 100%; /* Gør at containeren fylder tilgængelig bredde op til max-width */
-    padding: 0 15px; /* Tilføjer en lille padding på begge sider for at undgå at indholdet rører skærmkanterne */
-    display: flex; /* Aktiverer flexbox */
-    justify-content: center; /* Centrerer indholdet horisontalt */
-    align-items: center; /* Centrerer indholdet vertikalt */
+    margin: 0 auto;
+    width: 100%; 
+    padding: 0 15px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
   }
 
   .split { 
     flex-direction: row;
   }
+
  .split > * {
   flex-basis: 100%;
   }
+
  .split > * + * {
   margin-left: 3em;
-  }
-
-  footer .footer-container p {
-  white-space: normal; 
   }
 
   .portfolio-container {
@@ -531,7 +505,7 @@ footer p {
   }
 
   .ikon-grid {
-  grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
   }
 
   .kontakt-kasse {
