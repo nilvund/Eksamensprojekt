@@ -57,16 +57,17 @@ span {
 
 .container {
   margin: 0 auto;
-  width: min(90%);
+  width: min(100%);
 }
 
-header,
-footer {
-  padding: 1.1em;
-  background-color: #FFB96E;
+header, footer {
   display: flex;
-  flex-direction: column; 
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between; /* Spreder børneelementerne jævnt */
+  align-items: center; /* Centrerer elementerne vertikalt */
+  flex-wrap: wrap; /* Tillader elementerne at gå på næste linje, hvis ikke der er nok plads */
+  padding: 1.1em; /* Juster efter behov */
+  background-color: #FFB96E;
 }
 
 img {
@@ -136,8 +137,10 @@ padding: 1em;
 }
 
 .navigation ul {
-  list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
   flex-direction: row; 
   margin-top: 0.5em; 
   padding: 0.5em;
@@ -202,13 +205,19 @@ section.video {
   padding: 0;
 } 
 
-video {
+.video-container {
+  position: relative;
+  padding-top: 56.25%; 
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  right: 0;
-  bottom: 1.1em;
-  min-width: 100%; 
-  min-height: 100%;
 }
 
 .billede {
@@ -217,6 +226,10 @@ video {
   height: auto;
   margin-bottom: 2rem;
   margin-top: 2rem;
+}
+
+img {
+  padding: 1em;
 }
 
 .billede-hop {
@@ -320,6 +333,21 @@ video {
   margin: 10px auto; 
 }
 
+.ikon-grid, .ikon-grid-kontakt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Dette vil centrere dine items */
+  gap: 16px; /* Tilføjer mellemrum mellem items */
+  max-width: 100%; /* Sørger for at den maksimale bredde ikke overskrider skærmen */
+  margin: 0 auto; /* Centrerer grid i forhold til siden */
+}
+
+.ikon-grid > *, .ikon-grid-kontakt > * {
+  flex: 1 1 300px; /* Hver item vil forsøge at være mindst 300px bred og vokse hvis der er plads */
+  max-width: 300px; /* Sørger for at items ikke bliver bredere end 300px */
+}
+
+
 .text-align {
   font-size: 1em; 
   padding: 0 15%; 
@@ -370,7 +398,7 @@ footer p {
   }
 
   .navigation ul {
-    flex-direction: row;
+    flex-direction: column;
     padding: 1.5em;
   }
   
@@ -403,7 +431,7 @@ footer p {
   }
 
   .navigation ul {
-    flex-direction: row;
+    flex-direction: column;
     padding: 1.5em;
   }
     
@@ -440,11 +468,10 @@ footer p {
   .ikon-grid {
     grid-template-columns: repeat(3, 1fr); /* 3 kolonner for tablets */
   }
+
   .kontakt-kasse {
     width: 350px;
-    height: 80px; /* fortsat fast bredde */
-    /* Undgå at ændre bredden */
-  }
+    height: 80px; 
 
   .ikon-grid-kontakt {
     grid-template-columns: repeat(1, 300px);
@@ -471,11 +498,16 @@ footer p {
     margin-left: 3em 
   }
 
-  .introarbejde {
-    max-width: 76em; 
-    margin-right: auto; 
-    margin-left: auto; 
+  .container {
+    margin: 0 auto; /* Centrerer containeren horisontalt */
+    max-width: 1140px; /* En maksimumsbredde, der svarer til en typisk container størrelse for desktop */
+    width: 100%; /* Gør at containeren fylder tilgængelig bredde op til max-width */
+    padding: 0 15px; /* Tilføjer en lille padding på begge sider for at undgå at indholdet rører skærmkanterne */
+    display: flex; /* Aktiverer flexbox */
+    justify-content: center; /* Centrerer indholdet horisontalt */
+    align-items: center; /* Centrerer indholdet vertikalt */
   }
+
   .split { 
     flex-direction: row;
   }
@@ -484,9 +516,6 @@ footer p {
   }
  .split > * + * {
   margin-left: 3em;
-  }
-  .container{
-    max-width: 1250px;
   }
 
   footer .footer-container p {
@@ -516,10 +545,3 @@ footer p {
     margin-bottom: 10px;
   }
 }
-
-
-
-
-
-
-
