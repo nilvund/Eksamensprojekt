@@ -42,12 +42,8 @@ p {
   margin-top: 1em;
 }
 
-
-.ikontekst
-{
-  font-size: 1.5em; 
-  margin-bottom: 1.5em;
-  margin: 1em;
+span {
+  margin-top: 1em;
 }
 
 .text-align {
@@ -179,6 +175,11 @@ padding: 1em;
   padding-right: 5px; 
 }
 
+.indryk {
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
 .logo:hover {
   transform: scale(1.3);
   transition: 0.3s;
@@ -288,7 +289,6 @@ video {
 }
 
 .ikon-tekst{
-  margin-top: 1em;
   font-size: 1.2em;
 }
 
@@ -300,7 +300,6 @@ video {
 .fa-pen {
   font-size: 8em; 
 }
-
 
 .kontakt-container {
   display: flex; 
@@ -426,6 +425,11 @@ footer p {
         width: calc(33.333% - 20px); /* Tre elementer pr række minus margin */
         margin: 10px;
   }
+
+  .ikon-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner for tablets */
+  }
+
 }
 
 
@@ -481,17 +485,16 @@ footer p {
     width: calc(33.333% - 20px); 
     margin: 10px;
 }
+
+.ikon-grid {
+  grid-template-columns: repeat(3, 1fr); 
+}
+
 }
 
 
-@media (min-width: 601px) and (max-width: 900px) {
-  .ikon-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 kolonner for tablets */
-  }
-}
 
-@media (min-width: 901px) {
-  .ikon-grid {
-    grid-template-columns: repeat(6, 1fr); /* 6 kolonner for desktop */
-  }
-}
+
+
+
+
