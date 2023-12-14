@@ -31,10 +31,11 @@ h2 {
 
 h3 {
   font-size: 1.2em; 
-  font-weight: 900; 
+  font-weight: 800; 
   margin-bottom: 1.1em;
   line-height: 1.5em;
   text-align: center;
+  padding: 1.5em;
 }
 
 p {
@@ -328,7 +329,7 @@ section.video {
   border-radius: 10px; 
   padding: 10px; 
   width: 350px; 
-  height: 80px; 
+  height: fit-content; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   margin: 10px auto; 
@@ -390,7 +391,7 @@ footer p {
 
   .kontakt-kasse {
     width: 350px;
-    height: 80px;
+    height: auto;
   }
 
   .ikon-grid-kontakt {
@@ -400,7 +401,7 @@ footer p {
 }
 
 
-@media screen and (min-width: 901px) and (max-width:1200px) {
+@media screen and (min-width: 901px){   
   
   header {
     flex-direction: row; 
@@ -428,24 +429,34 @@ footer p {
   .split > * + * {
     margin-left: 3em;
   }
-    
+
+  .container {
+    margin: 0 auto;
+    width: 100%; 
+    padding: 0 15px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    max-width: 1300px; 
+  }
+ 
   .portfolio-container {
         flex-direction: row;
         flex-wrap: wrap;
   }
     
   .portfolio-item {
-        width: calc(33.333% - 20px); /* Tre elementer pr række minus margin */
+        width: calc(33.333% - 20px); 
         margin: 10px;
   }
 
   .ikon-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 kolonner for tablets */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .kontakt-kasse {
     width: 350px;
-    height: 80px; 
+    height: 60px; 
 
   }
 
@@ -455,66 +466,18 @@ footer p {
   }
 }
 
-
-@media screen and (min-width: 1201px) {
-  header {
-    flex-direction: row; 
-    justify-content: space-between; 
-    align-items: center; 
-  }
-
-  .navigation ul {
-    flex-direction: row; 
-    padding: 2em;
-    text-align: center;
-  }
-  
-  .navigation li {
-    margin-left: 3em 
-  }
-
-  .container {
-    margin: 0 auto;
-    width: 100%; 
-    padding: 0 15px;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-  }
-
-  .split { 
-    flex-direction: row;
-  }
-
- .split > * {
-  flex-basis: 100%;
-  }
-
- .split > * + * {
-  margin-left: 3em;
-  }
-
-  .portfolio-container {
-  flex-direction: row;
-  flex-wrap: wrap;
-  }
-
-  .portfolio-item {
-  width: calc(33.333% - 20px); 
-  margin: 10px;
-  }
-
+@media screen and (min-width: 1201px) { 
+  .ikon-grid.kontakt,
   .ikon-grid {
-    grid-template-columns: repeat(3, 1fr); 
+    max-width: 1000px;
+    width: 100%; 
+    margin: 0 auto; 
   }
 
-  .kontakt-kasse {
-    width: 350px;
-    height: 80px; 
-  }
-
-  .ikon-grid-kontakt {
-    grid-template-columns: repeat(1, 300px);
-    margin-bottom: 10px;
-  }
+  @media screen and (min-width: 1201px) { 
+    .ikon-grid.kontakt {
+      max-width: 1000px;
+      width: 100%; 
+      margin: 0 auto; 
+    }
 }
