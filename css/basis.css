@@ -292,7 +292,10 @@ section.video {
 
 .ikon-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(1, 1fr); 
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -322,27 +325,18 @@ section.video {
   justify-content: center; 
   margin: 0 auto; 
   margin-bottom: 10px; 
+  text-align: center;
 }
 
 .kontakt-kasse {
   background-color: #13389B; 
   border-radius: 10px; 
   padding: 10px; 
-  width: 350px; 
+  width: 250px; 
   height: fit-content; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   margin: 10px auto; 
-}
-
-.ikon-grid, 
-.ikon-grid-kontakt {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  margin: 1.5em; 
-  width: 100%; 
-  margin: 0 auto; 
 }
 
 .text-align {
@@ -388,6 +382,10 @@ footer p {
 
 
 @media screen and (min-width: 601px) and (max-width:900px) {
+
+  .ikon-grid {
+  grid-template-columns: repeat(2, 1fr); 
+  }
 
   .kontakt-kasse {
     width: 350px;
@@ -451,7 +449,8 @@ footer p {
   }
 
   .ikon-grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
+    max-width: 900px;
   }
 
   .kontakt-kasse {
@@ -463,21 +462,13 @@ footer p {
   .ikon-grid-kontakt {
     grid-template-columns: repeat(1, 300px);
     margin-bottom: 10px;
+    justify-content: flex-start;
   }
 }
 
 @media screen and (min-width: 1201px) { 
-  .ikon-grid.kontakt,
   .ikon-grid {
-    max-width: 1000px;
-    width: 100%; 
-    margin: 0 auto; 
+    grid-template-columns: repeat(6, 1fr); 
+    max-width: 1201px;
   }
-
-  @media screen and (min-width: 1201px) { 
-    .ikon-grid.kontakt {
-      max-width: 1000px;
-      width: 100%; 
-      margin: 0 auto; 
-    }
 }
