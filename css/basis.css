@@ -73,6 +73,9 @@ header, footer {
   background-color: #FFB96E;
 }
 
+nav ul li.aktiv a {
+  text-decoration: underline;
+}
 
 img {
   border-radius: 10px;
