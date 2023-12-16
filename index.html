@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="AimMedia" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/basis.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">    
+    <link rel="stylesheet" type="text/css" href="css/basis.css">
     <title>AimMedia</title>
     <script src="https://kit.fontawesome.com/7d468b9013.js" crossorigin="anonymous"></script>
 </head>
@@ -25,13 +25,11 @@
         </nav>
     </header>
     <main>
-        <section class="video">
-            <div class="video-container">
-                <video autoplay muted loop id="myVideo" controls>
-                    <source src="aimmedia-min - SD 480p.mov" type="video/mp4" alt="Brand video for AimMedia">
-                </video>
-            </div>  
-        </section>
+        <div class="video-container">
+            <video autoplay muted loop class="myvideo" controls>
+                <source src="Video/aimmedia.mov" type="video/mp4">
+            </video>
+        </div>  
         <section class="intro">
             <h1>Historier der rammer</h1>
             <div class="container">
@@ -43,7 +41,7 @@
                     <div>
                         <p>Husk nu også, at AimMedia ikke blot leverer hænder til dine praktiske udfordringer, men tilbyder også et eftersyn af din brandstrategi. Hvis du endnu ikke har udarbejdet en, mens du læser dette, er det her en venlig påmindelse om, at det måske er på tide at begynde at nedfælde nogle tanker. AimMedia er drevet af en enkel mission: At fortælle din historie, så den rammer.</p>
                         <div class="knap-position">
-                            <button class="min-knap"><a href="hendefraaimmedia.html">Læs mere</a></button>
+                            <button onclick="location.href='hendefraaimmedia.html'" class="min-knap">Læs mere</button>
                         </div>
                     </div>
                 </div>
@@ -64,7 +62,7 @@
                         <br>
                         <p>Hvis du vil dykke dybere ned i, hvem jeg er, og hvad virksomheden står for, så klik på knappen nedenfor.</p>
                             <div class="knap-position">
-                                <button class="min-knap-hvid"><a href="hendefraaimmedia.html">Læs mere</a></button>
+                                <button onclick="location.href='hendefraaimmedia.html'" class="min-knap-hvid">Læs mere</button>
                             </div>
                     </div>
                     <div>

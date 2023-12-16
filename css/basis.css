@@ -97,6 +97,7 @@ img {
 
 .min-knap {
   background-color: #13389B;
+  color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -151,7 +152,6 @@ padding: 1em;
   justify-content: center;
   list-style: none;
   flex-direction: row; 
-  background-color: none;
   text-align: center;
   align-items: center; 
 }
@@ -459,13 +459,11 @@ footer p {
   .kontakt-kasse {
     width: 350px;
     height: 60px; 
-
   }
 
   .ikon-grid-kontakt {
     grid-template-columns: repeat(1, 300px);
     margin-bottom: 10px;
-    justify-content: flex-start;
   }
 }
 

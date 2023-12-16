@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="AimMedia" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
                         <p>Her kan du f.eks. se "Grøn Smag", en bæredygtig madplan. som jeg har idéudviklet og efterfølgende lavet som mock-up af en app i programmet Adobe XD. Hvis du vil se den fulde prototype, kan du klikke <a href="https://xd.adobe.com/view/82fb474a-52b8-437b-9c96-a05d79bfe4ac-d7a8/" class="hyperlink-blaa">her</a>.</p>
                     </div>
                     <div>
-                        <img class="billede" src="img/foodapp-min-lys.jpg" alt="Billede af food app">
+                        <img class="billede" src="img/foodapp.jpg" alt="Billede af food app">
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                         <img class="billede" src="img/Vivi-i-profil-vaeg-min.jpg" alt="Eksempel på portrætbillede foran væg">
                         <p>Vil du se flere af denne type billeder? Så husk du stadig bare skal trykke her, for at kontakte mig.</p>
                         <div class="knap-position">
-                            <button class="min-knap"><a href="kontakt.html">Kontakt nu</a></button>
+                            <button onclick="location.href='kontakt.html'" class="min-knap">Kontakt nu</button>
                         </div> 
                     </div>
                 </div>
@@ -74,8 +74,10 @@
                         <p>Hvis du har brug for at få produceret videoindhold, så er du kommet til det rette sted. I videoproduktionen kan jeg håndtere hele processen fra storyboard til den sidste eksport. Uanset om det er en reklame, en brandvideo eller en eventdækning, så kan jeg tilbyde kreativitet og teknisk ekspertise, der sikrer, at dit budskab bliver leveret på en effektiv og engagerende måde.</p>
                         <p>Den video du ser her, er en simpel video om at blande saftevand. Den er mest produceret for at illustrere at intet er for småt til en lille historie. Hvis du vil se en mere seriøs video, som jeg selv har klippet, så går du bare på forsiden igen.</p>
                     </div>
-                    <div class="video-iframe">
-                        <iframe src="https://www.youtube.com/embed/Cu_b2GrUlao?si=gNO5TMRt9TCdLRSO" title="Sådan blander den perfekte saftevand" alt="En video om hvordan man blander saftevand" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <video autoplay muted loop controls>
+                            <source src="Video/saftevand.mov" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
@@ -114,9 +116,11 @@
                         <p>Har du brug for lidt ekstra 'wow' i dine videoer? Det er her, jeg kommer ind med mine After Effects skills. Jeg kan peppe dine videoer op med nogle simple animationer eller visuelle effekter. Ikke noget over the top, bare lige det, der skal til for at give dine videoer et lille ekstra pift.</p>
                         <p>Du kan f.eks. se en lille video om en citron her. Den er lavet fordi jeg skulle lave en kort video, der netop skulle omhandle denne citron. Det er simpelt, og nok ikke det vildeste du har set, men jeg synes selv, at det er blevet en fin lille historie.</p>
                     </div>
-                    <div class="video-iframe">
-                        <iframe src="https://www.youtube.com/embed/wVV-PpTujXs?si=Sv52udd6_c_Lc_Ub" title="Citronen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
+                    <div class="video-container">
+                        <video autoplay muted loop controls>
+                            <source src="Video/citronen.mov" type="video/mp4">
+                        </video>
+                    </div>    
                 </div>
             </div>
         </section>  
